@@ -1,0 +1,41 @@
+<%- include('../partial/header', { pageTitle: 'Katalog Mobil' }) %>
+    <div class="card">
+        <h1>Katalog Mobil</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Mobil</th>
+                    <th>Tipe</th>
+                    <th>Kursi</th>
+                    <th>Harga / Hari</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% mobilList.forEach((mobil, i)=> { %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= mobil.nama %>
+                        </td>
+                        <td>
+                            <%= mobil.tipe %>
+                        </td>
+                        <td>
+                            <%= mobil.kursi %>
+                        </td>
+                        <td>Rp <%= mobil.hargaPerHari.toLocaleString('id-ID') %>
+                        </td>
+                        <td>
+                            <%= mobil.tersedia ? 'Tersedia' : 'Disewa' %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <p><a class="btn" href="/tambah">Sewa Mobil</a></p>
+    </div>
+    <%- include('../partial/footer') %>

@@ -1,0 +1,135 @@
+/* Reset CSS & Box Model standar (Modul 01) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f1f5f9;
+}
+
+a {
+    color: #1d4ed8;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #e3750e;
+}
+
+.navbar a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #1717c7;
+    text-decoration: underline;
+}
+
+.navbar .brand {
+    font-weight: 700;
+    margin-right: auto;
+    color: #000000;
+}
+
+.container {
+    max-width: 860px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h1 {
+    margin-bottom: 1rem;
+}
+
+.card p,
+.card ul {
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    padding-left: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th,
+td {
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #f8fafc;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.25rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+.btn:focus {
+    outline: 3px solid #fbbf24;
+    outline-offset: 2px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.2rem;
+    background: #1d4ed8;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e3750e;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.85rem;
+    color: #475569;
+}

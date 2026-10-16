@@ -1,0 +1,24 @@
+<%- include('../partial/header', { pageTitle: 'Sewa Mobil' }) %>
+    <div class="card">
+        <h1>Sewa Mobil</h1>
+        <form action="/tambah" method="POST">
+            <label for="namaPenyewa">Nama Penyewa</label>
+            <input type="text" id="namaPenyewa" name="namaPenyewa" placeholder="Masukkan nama Anda" required>
+
+            <label for="lamaSewa">Lama Sewa (hari)</label>
+            <input type="number" id="lamaSewa" name="lamaSewa" min="1" max="30" step="1" placeholder="Masukkan angka saja" required>
+
+            <label for="jenisMobil">Jenis Mobil</label>
+            <select id="jenisMobil" name="jenisMobil" required>
+                <option value="">-- Pilih jenis mobil --</option>
+                <% jenisMobilList.forEach(j=> { %>
+                    <option value="<%= j %>">
+                        <%= j %>
+                    </option>
+                    <% }) %>
+            </select>
+
+            <button type="submit" class="btn">Kirim Pesanan</button>
+        </form>
+    </div>
+    <%- include('../partial/footer') %>

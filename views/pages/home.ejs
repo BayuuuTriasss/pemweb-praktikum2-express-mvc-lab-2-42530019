@@ -1,0 +1,12 @@
+<%- include('../partial/header', { pageTitle: 'Beranda Aplikasi' }) %>
+    <div class="card">
+        <h1>Halo, <%= userName %>!</h1>
+        <p>Selamat datang di Rental Mobil Merdeka. Keunggulan kami:</p>
+        <ul>
+            <% fiturList.forEach(fitur => { %>
+                <li><strong><%= fitur %></strong></li>
+            <% }) %>
+        </ul>
+        <a class="btn" href="/katalog">Lihat Katalog Mobil</a>
+    </div>
+<%- include('../partial/footer') %>
