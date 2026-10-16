@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', pageroutes);
 
 app.use((req, res) => {
-    res.status(404).render('404 Not Found', { title: '404 Not Found' });
+  res.status(404).render('pages/about', { pageTitle: 'Tidak Ditemukan' });
 });
 
 app.listen(PORT, () => {
