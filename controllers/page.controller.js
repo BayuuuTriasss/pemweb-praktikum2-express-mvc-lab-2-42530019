@@ -24,7 +24,7 @@ exports.getKatalog = (req, res) => {
 exports.getTambahSewa = (req, res) => {
     res.render('pages/tambah', {
         pageTitle: 'Sewa',
-        jenisMobilList: ['Luxury MPV', 'Van', 'MPV', 'SUV']
+        jenisMobilList: ['Toyota Alphard', 'Hiace', 'Innova Reborn', 'Honda HRV']
     });
 };
 
